@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MainWindow>
+    <QuickAccessBar tooltip ="Studio.App.RobloxRibbonMainWindow.CustomizeQuickAccessBar" visible="true"></QuickAccessBar>
+    <SystemButton name="File" text="Studio.Common.Action.File" tooltip="Studio.App.RobloxRibbonMainWindow.OpenSaveManageDoc">
+        <SystemPopup>
+            <addaction name="fileSaveAction"/>
+            <addaction name="shortcutHelpAction"/>
+            <addaction name="settingsAction"/>
+            <addaction name="betaFeaturesAction"/>
+        </SystemPopup>
+    </SystemButton>
+    <RibbonBar minimizeButton="true" font="">
+        <TabPage name="Plugins" text="Studio.App.RobloxRibbonMainWindow.Plugins">
+            <Group name="Clients and Servers" text="Studio.App.RobloxRibbonMainWindow.ClientsAndServers" modernIcon="StartServerAndClient" icon=":/RibbonBar/images/RibbonIcons/Test/Start-Server.png" width="32" height="32">
+                <addaction name="startServerAndPlayersAction" iscommonslot="true" style="textundericon" text="Studio.App.RobloxRibbonMainWindow.Start" tooltip="Studio.App.RobloxRibbonMainWindow.StartServerAndPlayers" icon=":/RibbonBar/images/RibbonIcons/Test/Start-Server.png" modernIcon="StartServerAndClient" width="32" height="32" />
+                <addseparator visible="false"/>
+                <addcombobox name="serverMode">
+                    <comboboxitem text="Studio.App.RobloxRibbonMainWindow.None" value ="0" />
+                    <comboboxitem text="Studio.App.RobloxRibbonMainWindow.LocalServer" value="1" defaultvalue="true" />
+                </addcombobox>
+                <addcombobox name="playersMode">
+                    <comboboxitem text="Studio.App.RobloxRibbonMainWindow.0Player" value="0"/>
+                    <comboboxitem text="Studio.App.RobloxRibbonMainWindow.1Player" value="1" defaultvalue="true"/>
+                    <comboboxitem text="Studio.App.RobloxRibbonMainWindow.2Players" value="2"/>
+                </addcombobox>
+                <addseparator visible="false"/>
+                <addaction name="cleanupServersAndPlayersAction" style="textundericon" text="Studio.App.RobloxRibbonMainWindow.Cleanup" icon=":/RibbonBar/images/Studio 2.0 icons/32x32/delete_x_32.png" modernIcon="Cleanup" width="32" height="32"/>
+            </Group>
+            <Group name="Snap to Grid" text="Studio.App.RobloxRibbonMainWindow.SnapToGrid" controlsCentering="true">
+                <addspinbox type="spinbox" keyboardTracking="true" tooltip="Studio.App.RobloxRibbonMainWindow.TheRotateGrid" name="setRotateIncrementAction" decimals="3" text="" minimum="0" maximum="9999" minumumWidth="100" step="5" suffix="°"/>
+                <addspinbox type="spinbox" keyboardTracking="true" tooltip="Studio.App.RobloxRibbonMainWindow.TheSnapGrid" name="setDragGridIncrementAction" decimals="3" text="" minimum="0" maximum="1024" minumumWidth="100" step="0.2" suffix="Studio.App.MainWindow.StudsSuffix"/>
+            </Group>
+        </TabPage>
+    </RibbonBar>
+</MainWindow>
