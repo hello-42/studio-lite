@@ -1,5 +1,6 @@
 # Studio-Lite
 ---
+##### Currently, Studio-Lite requires some changes to Group Policy auditing of Registry Keys in order for Windows Task Scheduler to have it's events properly fired and recognized. This is something currently in progress, with not much work left to go. It was just important to me that I get this out before I forgot about it.
 
 ## Introduction
 
